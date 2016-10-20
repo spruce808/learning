@@ -1,8 +1,8 @@
 #include "test_header.h"
 
-/* Returns the square of the supplied value
+/* Returns the summed-square of the supplied data values
 */
-uint32_t do_something(uint32_t const val)
+uint32_t do_something(TEST_DATA_T * const p_this)
 {
-	return val * val;
+	return (p_this->val1 * p_this->val1) + (p_this->val2 * p_this->val2);
 }

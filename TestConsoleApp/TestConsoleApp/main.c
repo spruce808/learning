@@ -2,17 +2,19 @@
 
 #include "test_header.h"
 
-int main(int argc, char * argv[])
+int main(int const argc, char * argv[])
 {
-	uint32_t val = 42;
-	uint32_t val_squared;
+	TEST_DATA_T data;
+	uint32_t result;
 
-	UNUSED(argc);
+	UNUSED_CONST(int, argc);
 	UNUSED(argv);
 	
 	printf("In main\n");
 
+	data.val1 = 32;
+	data.val2 = 104;
 
-	val_squared = do_something(val);
-	printf("Square of %u is %u\n", val, val_squared);
+	result = do_something(&data);
+	printf("Square of %u is %u\n", data.val1, result);
 }
