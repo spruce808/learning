@@ -1,2 +1,2 @@
 # learning
-Learnings and stuff
+Repo for learning Python etc
